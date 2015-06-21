@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jQuery Vertical Scrollbar | Created By Dean </title>
+	<!-- styles -->
+	<style>
+		body{
+		margin:0; 
+		padding:0; 
+		color:#b3b4b6;
+		background:#141824; 
+		font-family:Verdana,Geneva,sans-serif; 
+		font-size:13px; 
+		line-height:20px;
+	    }
+		a:link,a:visited,a:hover{
+		color:inherit;
+	    }
+		h1{
+		font-family:Georgia,serif; 
+		font-size:18px; 
+		font-style:italic;
+		margin:40px; 
+		color:#26beff;
+	    }
+		h2
+		{
+		font-family:Georgia,serif; 
+		font-size:16px; 
+	    font-style:italic; 
+	    color:#eee;
+	    }
+		p
+		{
+		margin:0 0 20px 0;
+	    }
+		hr{
+		height:0; 
+		border:none; 
+		border-bottom:1px solid rgba(255,255,255,0.13); 
+		border-top:1px solid rgba(0,0,0,1); 
+		margin:9px 10px; 
+		clear:both;
+	    }
+		.links{
+		 margin:10px;
+		}
+		.links a{
+		 display:inline-block;
+		 padding:3px 15px;
+		 margin:7px 10px;
+		 background:#444;
+		 text-decoration:none;
+		 -webkit-border-radius:15px;
+		 -moz-border-radius:15px;
+		 border-radius:15px;
+		}
+		.links a:hover{
+		background:#eb3755; 
+		color:#fff;
+	    }
+		.content{
+		margin:40px;
+		width:260px;
+		height:500px;
+		padding:20px; 
+		overflow:auto; 
+		background:#0c0f14; 
+		-webkit-border-radius:3px; 
+		-moz-border-radius:3px; 
+		border-radius:3px;
+	    }
+		.content p:nth-child(even)
+		{color:#999;
+		font-family:Georgia,serif; 
+		font-size:17px;
+		font-style:italic;
+		}
+		.content p:nth-child(3n+0)
+		{color:#c96;}
+		#sortable
+		{margin:0 0 20px 0; 
+		padding:0; 
+		list-style-type:none;
+	   }
+		#sortable li{
+	    /***change color:#444; to add circular radius box around text if needed ***/
+		padding:5px 10px; 
+		margin:5px 0;
+		border-radius:3px;/***border radius***/
+	    }
+		#sortable li:active{
+		background:#cc3300;
+	    }
+		#sortable a:hover{
+		color:yellow;
+		cursor:pointer;
+	   }
+
+	   html {
+       scrollbar-base-color: #9999cc;
+       scrollbar-arrow-color: white;
+       scrollbar-track-color: #ccccff;
+
+
+     }
+     /***
+     a.twitter-timeline{
+     position:absolute;
+     text-align:right;
+     }***/
+	</style>
+	<!--  scrollbars CSS -->
+	<link href="jquery.mCustomScrollbar.css" rel="stylesheet" />
+</head>
+<body>
+	
+	
+	<div id="content_1" class="content">
+		
+		<ul id="sortable">
+			
+
+             <li><a hover="#">USA Bobsled &amp; Skeleton</a></li>
+             <li><a hover="#">Insert The Athlete Name</a></li>
+             <li><a hover="#">Athlete Name</a></li>
+             <li><a hover="#">Insert The Athlete Name</a></li>
+             <li><a hover="#">Athlete Name</a></li>
+             <li><a hover="#">Insert The Athlete Name</a></li>
+             <li><a hover="#">Athlete Name</a></li>
+             <li><a hover="#">Insert The Athlete Name</a></li>
+             <li><a hover="#">Athlete Name</a></li>
+             <li><a hover="#">Insert The Athlete Name</a></li>
+             <li><a hover="#">Athlete Name</a></li>
+             <li><a hover="#">Insert The Athlete Name</a></li>
+             <li><a hover="#">Athlete Name</a></li>
+             <li><a hover="#">Insert The Athlete Name</a></li>
+             <li><a hover="#">Athlete Name</a></li>
+             <li><a hover="#">Insert The Athlete Name</a></li>
+             <li><a hover="#">Athlete Name</a></li>
+             <li><a hover="#">Insert The Athlete Name</a></li>
+             <li><a hover="#">Athlete Name</a></li>
+             <li><a hover="#">Insert The Athlete Name</a></li>
+             <li><a hover="#">Athlete Name</a></li>
+             <li><a hover="#">Insert The Athlete Name</a></li>
+             <li><a hover="#">Athlete Name</a></li>
+            <li><a hover="#">Insert The Athlete Name</a></li>
+            <li><a hover="#">Athlete Name</a></li>
+            <li><a hover="#">Insert The Athlete Name</a></li>
+            <li><a hover="#">Athlete Name</a></li>
+
+		</ul>
+</div>
+
+
+
+   <!--Twitter Feed-
+<a class="twitter-timeline"  href="https://twitter.com/USBSF" data-widget-id="407351550999158784">@USBSF</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>--End-->
+
+
+	<hr /><!--bottom line-->
+    <p>&nbsp;</p>
+	<!-- Google CDN jQuery with fallback to local -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script>!window.jQuery && document.write(unescape('%3Cscript src="js/minified/jquery-1.9.1.min.js"%3E%3C/script%3E'))</script>
+	<!-- Google CDN jQuery ui -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js"></script>
+	<!-- custom scrollbars plugin -->
+	<script src="jquery.mCustomScrollbar.concat.min.js"></script>
+	<script>
+		(function($){
+			$(window).load(function(){
+				$("#content_1").mCustomScrollbar({
+					scrollButtons:{
+						enable:true
+					}
+				});
+				$("#sortable").sortable({
+					scroll:false,
+					axis:"y",
+					opacity:0.5,
+					change:function(event,ui){
+						var p=ui.position.top,
+							h=ui.helper.outerHeight(true),
+							s=ui.placeholder.position().top,
+							elem=$("#content_1 .mCustomScrollBox")[0],
+							elemHeight=$("#content_1 .mCustomScrollBox").height();
+							pos=findPos(elem),
+							mouseCoordsY=event.pageY-pos[0];
+						if(mouseCoordsY<h || mouseCoordsY>elemHeight-h){
+							$("#content_1").mCustomScrollbar("scrollTo",p-(elemHeight/2));
+						}
+					}
+				});
+				function findPos(obj){
+					var curleft=curtop=0;
+					if (obj.offsetParent){
+						curleft=obj.offsetLeft
+						curtop=obj.offsetTop
+						while(obj=obj.offsetParent){
+							curleft+=obj.offsetLeft
+							curtop+=obj.offsetTop
+						}
+					}
+					return [curtop,curleft];
+				}
+			});
+		})(jQuery);
+	</script>
+</body>
+</html>

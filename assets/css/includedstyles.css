@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+
+
+
+
+nav.mainMenu ul li a{
+
+
+
+
+
+}
+
+/***
+a:link,a:visited,a:hover
+		{color:inherit;}
+		h1{font-family:Georgia,serif; 
+		font-size:18px; 
+		font-style:italic; 
+		margin:40px; 
+		color:#26beff;
+	    }
+		p{
+		margin:0 0 20px 0;
+	    }
+		hr{
+		height:0;
+		border:none; 
+		border-bottom:1px solid rgba(255,255,255,0.13);
+		border-top:1px solid rgba(0,0,0,1);
+		margin:9px 10px; 
+		clear:both;
+	    }
+		.links{margin:10px;}
+		.links a{display:inline-block; 
+		padding:3px 15px; 
+		margin:7px 10px; 
+		background:#444; 
+		text-decoration:none; 
+		-webkit-border-radius:15px; 
+		-moz-border-radius:15px; 
+		border-radius:15px;}
+		.links a:hover{
+		background:#eb3755; 
+		color:#fff;
+	    }
+		.output{margin:20px 40px;}
+		code{color:#5b70ff;}
+		.content{margin:40px; 
+		width:580px; 
+		height:494px; padding:10px; 
+		overflow:auto; 
+		background:#0c0f14; 
+		-webkit-border-radius:3px; 
+		-moz-border-radius:3px; 
+		border-radius:3px;
+	    }
+		.content .images_container{overflow:hidden;}
+		.content .images_container img{display:block; 
+		float:left; 
+		margin:0 5px; 
+		border:1px solid #0a162e;
+	    }
+		a[rel='toggle-buttons-scroll-type']{
+		display:inline-block; 
+		text-decoration:none;
+		 adding:3px 15px; 
+		 -webkit-border-radius:15px; 
+		 -moz-border-radius:15px; 
+		 border-radius:15px;
+		 background:#000; 
+		 margin:5px 20px 5px 0;}
+
+		 .images_container{
+         cursor:pointer;
+
+}
+
+/***Included SLEDTV Styles Sheet****/
+
+/**
+#athletetalk{
+font-family:myFirstFont;
+position:relative;
+color:#FFF;
+margin-right:547px;
+font-size: 72px;
+}
+
+#athletetalktext{
+position:relative;
+color:#FFF;
+margin-right:547px;
+font-size: 72px;
+font-family: "HelveticaNeue";
+}***/
